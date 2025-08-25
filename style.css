@@ -1,0 +1,365 @@
+:root {
+    --off-white: #FAF3E9;
+    --earthy-orange: #D2691E;
+    --dark-text: #3E362E;
+    --light-orange: #F5CBA7;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--off-white);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--off-white);
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--light-orange);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--earthy-orange);
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--earthy-orange);
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--earthy-orange);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 80px 0;
+    background-color: #FFF9F2;
+}
+
+.hero-section h2 {
+    font-size: 3rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Cards */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.card h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--earthy-orange);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--dark-text);
+    margin-bottom: 20px;
+}
+
+.card ul {
+    list-style: none;
+    text-align: left;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.card ul li::before {
+    content: '✓';
+    color: var(--earthy-orange);
+    position: absolute;
+    left: -20px;
+    font-weight: bold;
+}
+
+/* Produtos Section */
+.produtos-grid, .clube-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.produto-card p {
+    margin-bottom: 10px;
+}
+
+/* Clube Section */
+.clube-section {
+    background-color: #FFF9F2;
+}
+.clube-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: -20px auto 40px;
+}
+
+/* Sobre Section */
+.sobre-section {
+    text-align: center;
+}
+
+.sobre-section p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Botões */
+button {
+    background-color: var(--earthy-orange);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    margin-top: auto;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #b05718;
+    transform: scale(1.05);
+}
+
+.produto-card, .clube-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-text);
+    color: var(--off-white);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: var(--off-white);
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--dark-text);
+}
+
+#modal-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--earthy-orange);
+    margin-bottom: 10px;
+}
+#modal-product-info {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#payment-form h4 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+    border-bottom: 1px solid var(--light-orange);
+    padding-bottom: 5px;
+}
+
+#payment-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#payment-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.card-details-row {
+    display: flex;
+    gap: 15px;
+}
+
+.card-details-row div {
+    flex: 1;
+}
+
+.btn-pagar {
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.btn-pagar.loading {
+    background-color: #b05718;
+    cursor: wait;
+}
+
+.btn-pagar.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 20px;
+    margin-top: -10px;
+    border: 3px solid rgba(255,255,255,0.2);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+#payment-form input.invalid {
+    border-color: #d9534f;
+    background-color: #f2dede;
+}
+
+.error-message {
+    color: #d9534f;
+    font-size: 0.8rem;
+    display: block;
+    height: 1rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+#success-message {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#success-message h4 {
+    font-size: 1.8rem;
+    color: var(--earthy-orange);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    nav ul {
+        gap: 1rem;
+    }
+    section h2 {
+        font-size: 2rem;
+    }
+    .modal-content {
+        margin: 20% auto;
+        padding: 20px;
+    }
+}
