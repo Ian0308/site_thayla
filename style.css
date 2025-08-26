@@ -391,16 +391,13 @@ footer {
     flex-wrap: wrap;
     gap: 40px;
 }
-
-.equipe-grid h3 {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    
+.membro{
+    text-align: center;
+    margin: 10px;
 }
-.equipe-grid p {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+
+.membro h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    
 }
