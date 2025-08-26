@@ -1,3 +1,4 @@
+
 :root {
     --off-white: #FAF3E9;
     --earthy-orange: #D2691E;
@@ -158,6 +159,9 @@ section h2 {
     margin-bottom: 10px;
 }
 
+.produto-section {
+    background-color: #fff;
+}
 /* Clube Section */
 .clube-section {
     background-color: #FFF9F2;
